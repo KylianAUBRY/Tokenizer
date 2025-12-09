@@ -1,5 +1,5 @@
 📘 Whitebook — Projet 42 Tokenizer
-Token ERC-20 : kyaubry42 (KY42)
+Token ERC-20 : 42kyaubry (KY42)
 1. 🎯 Objectif du projet
 
 Le but de ce projet est de créer un token ERC-20 conforme aux standards Ethereum, en utilisant la librairie sécurisée OpenZeppelin.
@@ -30,7 +30,7 @@ La gestion des decimals (par défaut : 18)
 
 Cela garantit la conformité avec le standard ERC-20.
 
-3. 🪙 Le token : kyaubry42 (KY42)
+3. 🪙 Le token : 42kyaubry (KY42)
 
 Propriétés du token
 le KY42 est un token pédagogique (utilisé pour comprendre ERC20)
@@ -82,8 +82,7 @@ Au déploiement, la supply est mintée au compte qui déploie le contrat :
 
 _mint(msg.sender, initialSupply * 10 ** decimals());
 
-Rôle
-
+# Rôle
 Le deployer devient le détenteur de tous les tokens émis au lancement.
 Aucun autre mint n’est possible ensuite (pas de fonction mint() publique).
 
@@ -94,20 +93,15 @@ Aucun autre mint n’est possible ensuite (pas de fonction mint() publique).
 Le contrat utilise OpenZeppelin, reconnu comme standard industriel.
 Avantages principaux :
 
+------------------------------------------------------------------------
 Code audité et éprouvé
 Protection contre les overflows / underflows via Solidity 0.8
 Conforme ERC-20 sans réimplémentation manuelle
 Pas d'accès administrateur, pas de mint ultérieur : la surface d'attaque est minimale.
+------------------------------------------------------------------------
 
 7. 🛠 Déploiement
-Prérequis
-Node.js + Hardhat / Foundry / Remix
-
-Wallet type MetaMask
-Environnement compatible EVM (Ethereum, Sepolia, Polygon, etc.)
-
-Paramètre à fournir au déploiement :
-constructor(uint256 initialSupply)
+suivre Deployment.md
 
 8. 📝 Résumé
 
@@ -126,14 +120,17 @@ la gestion des decimals,
 la création d'un token ERC-20,
 les bonnes pratiques de sécurité.
 
-9. 📦 Possibles évolutions (facultatives)
+## Ressources et références
 
-Si tu veux enrichir ton projet :
+### Documentation officielle
+- [Ethereum.org](https://ethereum.org)
+- [Solidity Docs](https://docs.soliditylang.org)
+- [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts)
 
-Ajouter un Ownable pour des privilèges admin
-Ajouter une fonction de burn
-Ajouter une fonction de mint contrôlée
-Ajouter des événements custom
-Créer une interface web pour interagir avec le token
+### Outils utilisés
+- [Remix IDE](https://remix.ethereum.org)
+- [MetaMask](https://metamask.io)
+- [Sepolia Etherscan](https://sepolia.etherscan.io)
 
-Déployer sur une testnet publique (Sepolia)
+### Standards
+- [EIP-20: ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
